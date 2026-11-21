@@ -57,7 +57,7 @@ createServer(async (request, response) => {
   const problem = typeof fields.problem === "string" ? fields.problem.trim() : "";
   if (email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
       !name || name.length > 100 || problem.length > 2000) {
-    return reply(400, { error: "Enter a name and a valid work email." });
+    return reply(400, { error: "Enter a name and a valid email." });
   }
 
   try {

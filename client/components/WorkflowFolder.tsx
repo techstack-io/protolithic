@@ -4,9 +4,9 @@ import { useState } from "react";
 import FolderFloat from "@/components/FolderFloat";
 
 const workflows = [
-  { label: "Website testing", example: "Turn tester feedback into tickets with acceptance criteria. Route approved tickets to the project lead for Jira submission." },
-  { label: "Data cleanup", example: "Review incorrect industry labels, record verified corrections, and track what still needs to be submitted." },
-  { label: "Weekly reporting", example: "Collect this week’s numbers, draft the report, and assign someone to review it before it goes out." },
+  { label: "Plan your week", example: "Pull errands, appointments, and deadlines into one list, then decide what to tackle each day." },
+  { label: "Plan a move", example: "Break packing, address changes, and utility transfers into tasks you can share with your household." },
+  { label: "Launch a project", example: "Agree on the milestones, assign owners, and track what’s ready for review." },
 ];
 
 export default function WorkflowFolder() {
@@ -17,7 +17,7 @@ export default function WorkflowFolder() {
     <div className="mx-auto flex w-full max-w-md flex-col items-center rounded-2xl border border-[#244855]/15 bg-white/85 px-5 pb-6 pt-24 sm:px-8">
       <FolderFloat
         items={workflows.map(({ label }) => label)}
-        label="Workflow examples"
+        label="Task planning examples"
         sublabel="Open to explore"
         trigger="click"
         closeOnSelect={false}

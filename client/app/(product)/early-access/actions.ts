@@ -7,7 +7,7 @@ export async function requestEarlyAccess(_previous: string, form: FormData): Pro
 
   if (!name || name.length > 100 || email.length > 254 ||
       !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || problem.length > 2000) {
-    return "Enter a name, a valid work email, and up to 2,000 characters for your workflow.";
+    return "Enter a name, a valid email, and up to 2,000 characters for your workflow.";
   }
 
   try {

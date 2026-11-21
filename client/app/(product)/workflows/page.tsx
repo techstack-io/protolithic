@@ -4,6 +4,11 @@ export const metadata: Metadata = { title: "Workflows | Protolithic" };
 
 const examples = [
   {
+    title: "Plan a household move",
+    request: "I need to move in six weeks and I’m not sure where to start.",
+    steps: ["Book movers or reserve a truck.", "Make a room-by-room packing list.", "Schedule address changes and utility transfers."],
+  },
+  {
     title: "Website feedback to Jira-ready tickets",
     request: "I need my team to review website feedback before it goes into Jira.",
     steps: ["Draft tickets with acceptance criteria.", "Send drafts for human review.", "Queue approved tickets for the project lead to submit."],
@@ -18,8 +23,8 @@ const examples = [
 export default function WorkflowsPage() {
   return (
     <main className="mx-auto max-w-6xl px-6 py-20">
-      <h1 className="max-w-3xl text-5xl">See how a business problem becomes a workflow.</h1>
-      <p className="mt-5 text-[#244855]">Define the outcome, draft the tasks, and decide who signs off.</p>
+      <h1 className="max-w-3xl text-5xl">See how a goal becomes a plan.</h1>
+      <p className="mt-5 text-[#244855]">Break personal projects and team goals into steps you can follow.</p>
       <div className="mt-12 grid gap-6">
         {examples.map(({ title, request, steps }) => (
           <section key={title} className="grid gap-8 rounded-xl border border-[#244855]/15 bg-white p-7 md:grid-cols-[1fr_1.15fr] md:p-10">
