@@ -1,44 +1,69 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import WorkflowFolder from "@/components/WorkflowFolder";
+import { ArrowRight, Circle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Protolithic — Task management for life and work",
   description: "A suite of task management tools for individuals, households, and teams.",
 };
 
+const tasks = ["Pick a day for groceries and errands", "Set aside an hour for a personal project", "Send the team an update on Friday"];
+
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#F7FAFC] text-[#1D1B18]">
-      <main className="bg-[linear-gradient(to_right,#24485512_1px,transparent_1px),linear-gradient(to_bottom,#24485512_1px,transparent_1px)] bg-[size:32px_32px]">
-        <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-[1.15fr_1fr] md:py-28">
-          <div>
-            <h1 className="max-w-2xl font-heading text-5xl leading-[1.02] tracking-tight md:text-7xl">
-              Make a plan for <em className="text-[#C75A3C]">what’s next.</em>
-            </h1>
-            <p className="mt-6 max-w-lg text-lg leading-relaxed text-[#244855]">
-              Protolithic is a suite of task management tools for life and work. Organize your day, plan a personal project, or coordinate tasks and reviews with a team.
-            </p>
-            <Link href="/workflows" className="mt-8 inline-flex items-center gap-3 rounded-lg bg-[#1D1B18] px-5 py-3 font-semibold text-white hover:text-white hover:bg-[#244855]">
-              Explore workflows <ArrowRight aria-hidden="true" size={17} />
+    <main>
+      <section className="mx-auto grid max-w-7xl items-start gap-12 px-6 py-16 md:grid-cols-[1.05fr_1fr] md:gap-16 md:py-28">
+        <div>
+          <h1 className="text-5xl font-semibold leading-[1.05] tracking-tight lg:text-6xl">
+            Make a plan for
+            <em className="mt-2 block font-heading text-[0.85em] font-normal text-[#C75A3C]">what’s next.</em>
+          </h1>
+          <p className="mt-8 max-w-lg text-lg leading-relaxed text-[#244855]/85">
+            Protolithic is a suite of task management tools for life and work. Organize your day, plan a personal project, or coordinate with your team.
+          </p>
+          <div className="mt-9 flex flex-wrap gap-3">
+            <Link href="#products" className="inline-flex items-center gap-3 rounded-xl bg-[#E64833] px-5 py-3 font-semibold text-[#1D1B18] hover:bg-[#D9402D] hover:text-[#1D1B18]">
+              Explore products <ArrowRight aria-hidden="true" size={17} />
+            </Link>
+            <Link href="/workflows" className="rounded-xl border border-[#244855]/25 px-5 py-3 font-semibold text-[#244855] hover:bg-[#F7FAFC]">
+              See how it works
             </Link>
           </div>
-          <WorkflowFolder />
-        </section>
-        <section className="border-t border-[#244855]/15 bg-[#F7FAFC]">
-          <div className="mx-auto max-w-6xl px-6 py-14">
-            <h2 className="font-heading text-3xl">Products</h2>
-            <article className="mt-5 max-w-xl rounded-xl border border-[#244855]/15 bg-white p-6">
-              <h3 className="font-heading text-xl">UAT Workspace</h3>
-              <p className="mt-2 text-[#244855]">For teams that need to turn software testing feedback into tasks, review them, and prepare approved issues for handoff.</p>
-              <a href="https://uat.protolithic.app/" className="mt-4 inline-flex items-center gap-2 font-semibold">
-                Open UAT Workspace <ArrowRight aria-hidden="true" size={16} />
-              </a>
-            </article>
+        </div>
+
+        <figure className="m-0 rounded-3xl border border-[#244855]/15 bg-white p-6 shadow-[0_16px_48px_-22px_#24485555] sm:p-8">
+          <figcaption className="flex flex-wrap items-center justify-between gap-3">
+            <h2 className="text-2xl font-semibold text-[#244855]">Plan your week</h2>
+            <span className="rounded-full bg-[#FCE9D0] px-3 py-1 text-xs font-semibold text-[#874F41]">Example</span>
+          </figcaption>
+          <blockquote className="mx-0 mt-6 rounded-xl border border-[#244855]/10 bg-[#F7FAFC] p-4 text-[#244855]">
+            “I want to get my errands done, make time for my own project, and keep my team in the loop.”
+          </blockquote>
+          <div className="mt-5 rounded-xl border border-[#244855]/15 px-4 py-1">
+            <h3 className="py-3 font-semibold text-[#244855]">Next steps</h3>
+            <ul className="divide-y divide-[#244855]/10 border-t border-[#244855]/10">
+              {tasks.map((task) => (
+                <li key={task} className="flex items-start gap-3 py-3 text-sm text-[#244855]">
+                  <Circle aria-hidden="true" size={15} className="mt-0.5 shrink-0 text-[#C75A3C]" />
+                  {task}
+                </li>
+              ))}
+            </ul>
           </div>
-        </section>
-      </main>
-    </div>
+        </figure>
+      </section>
+      <section id="products" className="scroll-mt-8 border-t border-[#244855]/15 bg-[#F7FAFC]">
+        <div className="mx-auto max-w-6xl px-6 py-14">
+          <h2 className="font-heading text-3xl">Products</h2>
+          <article className="mt-5 max-w-xl rounded-xl border border-[#244855]/15 bg-white p-6">
+            <h3 className="font-heading text-xl">UAT Workspace</h3>
+            <p className="mt-2 text-[#244855]">For teams that need to turn software testing feedback into tasks, review them, and prepare approved issues for handoff.</p>
+            <a href="https://uat.protolithic.app/" className="mt-4 inline-flex items-center gap-2 font-semibold">
+              Open UAT Workspace <ArrowRight aria-hidden="true" size={16} />
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
   );
 }
