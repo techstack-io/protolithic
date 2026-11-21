@@ -20,9 +20,14 @@ export default function Home() {
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-[#244855]">
               Describe a business problem in plain language. Protolithic helps you turn it into clear tasks, assign owners, and decide what needs review.
             </p>
-            <Link href="/workflows" className="mt-8 inline-flex items-center gap-3 rounded-lg bg-[#1D1B18] px-5 py-3 font-semibold text-white hover:text-white hover:bg-[#244855]">
-              Explore workflows <ArrowRight aria-hidden="true" size={17} />
-            </Link>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <Link href="/workflows" className="inline-flex items-center gap-3 rounded-lg bg-[#1D1B18] px-5 py-3 font-semibold text-white hover:text-white hover:bg-[#244855]">
+                Explore workflows <ArrowRight aria-hidden="true" size={17} />
+              </Link>
+              <a href="https://uat.protolithic.app/" className="inline-flex items-center gap-3 rounded-lg border border-[#244855]/25 bg-white px-5 py-3 font-semibold text-[#244855] hover:bg-[#F0F5F7] hover:text-[#244855]">
+                Open UAT Workspace <ArrowRight aria-hidden="true" size={17} />
+              </a>
+            </div>
           </div>
           <WorkflowFolder />
         </section>
