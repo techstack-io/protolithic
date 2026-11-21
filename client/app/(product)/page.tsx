@@ -4,8 +4,8 @@ import { ArrowRight } from "lucide-react";
 import WorkflowFolder from "@/components/WorkflowFolder";
 
 export const metadata: Metadata = {
-  title: "Protolithic — Turn business problems into workflows",
-  description: "Describe a business problem and turn it into a workflow with clear tasks, owners, and review steps.",
+  title: "Protolithic — Task management for life and work",
+  description: "A suite of task management tools for individuals, households, and teams.",
 };
 
 export default function Home() {
@@ -15,16 +15,28 @@ export default function Home() {
         <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-[1.15fr_1fr] md:py-28">
           <div>
             <h1 className="max-w-2xl font-heading text-5xl leading-[1.02] tracking-tight md:text-7xl">
-              From <em className="text-[#C75A3C]">“we should fix this”</em> to work that gets done.
+              Make a plan for <em className="text-[#C75A3C]">what’s next.</em>
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-[#244855]">
-              Describe a business problem in plain language. Protolithic helps you turn it into clear tasks, assign owners, and decide what needs review.
+              Protolithic is a suite of task management tools for life and work. Organize your day, plan a personal project, or coordinate tasks and reviews with a team.
             </p>
             <Link href="/workflows" className="mt-8 inline-flex items-center gap-3 rounded-lg bg-[#1D1B18] px-5 py-3 font-semibold text-white hover:text-white hover:bg-[#244855]">
               Explore workflows <ArrowRight aria-hidden="true" size={17} />
             </Link>
           </div>
           <WorkflowFolder />
+        </section>
+        <section className="border-t border-[#244855]/15 bg-[#F7FAFC]">
+          <div className="mx-auto max-w-6xl px-6 py-14">
+            <h2 className="font-heading text-3xl">Products</h2>
+            <article className="mt-5 max-w-xl rounded-xl border border-[#244855]/15 bg-white p-6">
+              <h3 className="font-heading text-xl">UAT Workspace</h3>
+              <p className="mt-2 text-[#244855]">For teams that need to turn software testing feedback into tasks, review them, and prepare approved issues for handoff.</p>
+              <a href="https://uat.protolithic.app/" className="mt-4 inline-flex items-center gap-2 font-semibold">
+                Open UAT Workspace <ArrowRight aria-hidden="true" size={16} />
+              </a>
+            </article>
+          </div>
         </section>
       </main>
     </div>

@@ -1,4 +1,9 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  description: "A suite of task management tools for individuals, households, and teams.",
+};
 
 export default function ProductLayout({ children }: { children: React.ReactNode }) {
   return (
