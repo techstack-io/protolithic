@@ -13,6 +13,8 @@ import {
 import { Tag } from "@/components/ui/Tag";
 import { stages, ventures } from "@/lib/theses";
 
+export const metadata = { title: "Protolithic Venture Studio" };
+
 const model = [
   {
     title: "Opportunity",

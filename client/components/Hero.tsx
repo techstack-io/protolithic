@@ -4,6 +4,8 @@ import DomeGallery from "./DomeGallery";
 import { ButtonLink } from "./ui/Button";
 import { theses } from "@/lib/theses";
 
+const thesisImages = theses.flatMap(({ src, label }) => src ? [{ src, alt: label }] : []);
+
 export function Hero() {
   return (
     <section
@@ -11,7 +13,7 @@ export function Hero() {
       className="relative h-[86vh] min-h-[620px] overflow-hidden border-b border-divider"
     >
       <DomeGallery
-        items={theses}
+        images={thesisImages.length ? thesisImages : undefined}
         fit={0.8}
         minRadius={600}
         maxVerticalRotationDeg={0}
