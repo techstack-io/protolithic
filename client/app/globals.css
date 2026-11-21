@@ -27,7 +27,7 @@
     --color-neutral-900: #201f1d;
 
 --font-heading: var(--font-fraunces);
-    --font-body: "Lora", Georgia, serif;
+    --font-body: var(--font-lora), Georgia, serif;
 
     /* airy scale — density 1.15x */
     --spacing: 0.25rem;
