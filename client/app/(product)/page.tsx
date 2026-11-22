@@ -14,15 +14,20 @@ export default function Home() {
     <main>
       <section className="mx-auto grid max-w-7xl items-start gap-12 px-6 py-16 md:grid-cols-[1.05fr_1fr] md:gap-16 md:py-28">
         <div>
-          <h1 className="text-5xl font-semibold leading-[1.05] tracking-tight lg:text-6xl">
-            Make a plan for
-            <em className="mt-2 block font-heading text-[0.85em] font-normal text-[#C75A3C]">what’s next.</em>
-          </h1>
+        <h1 className="flex flex-col gap-0 text-4xl sm:text-5xl font-semibold tracking-tight text-[#1E1B18]">
+          life logistics
+          <em
+            className="mt-2 block text-[0.80em] font-light italic text-[#C75A3C]"
+            style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
+          >
+           on auto-pilot.
+          </em>
+        </h1>
           <p className="mt-8 max-w-lg text-lg leading-relaxed text-[#244855]/85">
             Protolithic is a suite of task management tools for life and work. Organize your day, plan a personal project, or coordinate with your team.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
-            <Link href="#products" className="inline-flex items-center gap-3 rounded-xl bg-[#E64833] px-5 py-3 font-semibold text-[#1D1B18] hover:bg-[#D9402D] hover:text-[#1D1B18]">
+            <Link href="#products" className="inline-flex items-center gap-3 rounded-xl text-white bg-[#E64833] px-5 py-3 font-semibold text-[#1D1B18] hover:bg-[#D9402D] hover:text-white/90">
               Explore products <ArrowRight aria-hidden="true" size={17} />
             </Link>
             <Link href="/workflows" className="rounded-xl border border-[#244855]/25 px-5 py-3 font-semibold text-[#244855] hover:bg-[#F7FAFC]">
