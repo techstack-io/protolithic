@@ -28,7 +28,7 @@ export default function ProductLayout({ children }: { children: React.ReactNode 
         <nav aria-label="Main navigation" className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-5">
           <Link href="/" className="inline-flex shrink-0 items-center">
             <Image
-              src="/brand/protolithic-logo-p.png"
+              src="/brand/protolithic-logo-3.png"
               alt="Protolithic"
               width={2160}
               height={720}
