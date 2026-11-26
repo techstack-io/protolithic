@@ -12,7 +12,7 @@ const tasks = ["Pick a day for groceries and errands", "Set aside an hour for a 
 export default function Home() {
   return (
     <main>
-      <section className="mx-auto grid max-w-7xl items-start gap-12 px-6 py-16 md:grid-cols-[1.05fr_1fr] md:gap-16 md:py-28">
+      <section className="mx-auto grid max-w-7xl items-start gap-12 px-6 pt-24 pb-12 md:grid-cols-[1.05fr_1fr] md:gap-16 md:pt-48 md:pb-8">
         <div>
         <h1 className="flex flex-col gap-0 text-4xl sm:text-5xl font-semibold tracking-tight text-[#1E1B18]">
           life logistics
